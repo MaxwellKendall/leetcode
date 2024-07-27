@@ -9,10 +9,7 @@ const resolvedPath = path.join(projectRoot, fileToExecute);
 /**
  * 1 Kilobyte (KB) = 1024 bytes
  * 1 Megabyte (MB) = 1024 Kilobytes
- *
- * So, to convert 10 MB to bytes:
- *  First, convert MB to KB: 10 MB * 1024 KB/MB = 10240 KB
- *  Then, convert KB to bytes: 10240 KB * 1024 bytes/KB = 10485760 bytes
+ * 1 Gigabyte (GB) = 1024 Megabytes
  */
 const bufferSizes = {
   '1KB': 1 * 1024,
@@ -30,6 +27,11 @@ const bufferSizes = {
   '1GB': 1 * 1024 * 1024 * 1024,
 };
 
+/*
+ * NOTE: The buffer size determines how much output data can be stored in memory,
+ * but it does not directly correspond to the total memory usage of the process,
+ * which includes other factors such as code, data, and heap memory.
+ */
 const execOptions = {
   maxBuffer: bufferSizes['10MB'],
 };
