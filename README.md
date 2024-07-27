@@ -8,5 +8,12 @@ This repository is for storing the algorithims for common programming problems. 
         README.md
         test.js
 
-TODOS:
-- [ ] Set up testing rigg
+## Scripts
+- To execute tests:
+```shell
+    npm run test <path-to-test-from-project-root>
+```
+- To measure efficency: 
+```shell
+    npm run measure <path-to-executable-from-root>
+```
